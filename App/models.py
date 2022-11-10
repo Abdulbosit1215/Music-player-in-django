@@ -4,7 +4,7 @@ from django.db import models
 class Song(models.Model):
     title = models.CharField(max_length=255)
     artist = models.CharField(max_length=255)
-    image = models.ImageField()
+    image = models.FileField(blank=True , null=True)
     audio_file = models.FileField(blank=True, null=True)
     audio_link = models.CharField(max_length=255, blank=True, null=True)
     duration = models.CharField(max_length=20)
